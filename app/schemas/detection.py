@@ -17,7 +17,10 @@ class DeteccionBase(BaseModel):
 
 
 class DeteccionCreate(DeteccionBase):
-  pass
+  id: int
+  timestamp: datetime
+  evento_id: int | None = None
+  model_config = ConfigDict(from_attributes=True)
 
 
 class DeteccionResponse(DeteccionBase):
