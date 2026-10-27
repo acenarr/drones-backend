@@ -7,9 +7,10 @@ from app.api.v1.endpoints import (
     alerts,
     auth,
     detections,
-    events,
+    event,
     missions,
     video,
+    drone
 )
 
 api_router = APIRouter()
@@ -34,7 +35,7 @@ api_router.include_router(missions.router, prefix="/missions", tags=["Misiones"]
 api_router.include_router(
     detections.router, prefix="/detections", tags=["Detecciones"]
 )
-api_router.include_router(events.router, prefix="/events", tags=["Eventos"])
+api_router.include_router(event.router, prefix="/events", tags=["Eventos"])
 api_router.include_router(alerts.router, prefix="/alerts", tags=["Alertas"])
 api_router.include_router(video.router, prefix="/video", tags=["Video"])
 

@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 from app.models.alert import Alerta
 from app.models.detection import Deteccion
 from app.models.event import Evento
-from app.services.notification_service import notification_manager
+from app.services.notfication_service import notification_manager
 
 UMBRAL_CONFIANZA = 0.70
 
